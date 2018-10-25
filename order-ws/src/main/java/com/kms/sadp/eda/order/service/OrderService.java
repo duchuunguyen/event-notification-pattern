@@ -12,16 +12,20 @@ public class OrderService {
 //  @Autowired
 //  private DomainEventPublisher domainEventPublisher;
 
-  @Autowired
-  private OrderRepository orderRepository;
+    @Autowired
+    private OrderRepository orderRepository;
 
-  public Order createOrder(OrderDetails orderDetails) {
+    @Autowired
+    private OrderEventProducer orderEventProducer;
+
+    public Order createOrder(OrderDetails orderDetails) {
 //    ResultWithEvents<Order> orderWithEvents = Order.createOrder(orderDetails);
 //    Order order = orderWithEvents.result;
-    Order order = new Order(orderDetails);
-    return orderRepository.save(order);
+        Order order = new Order(orderDetails);
+        orderEventProducer.send(order);
+        return orderRepository.save(order);
 //    domainEventPublisher.publish(Order.class, order.getId(), orderWithEvents.events);
-  }
+    }
 
 //  public void approveOrder(Long orderId) {
 //    Order order = orderRepository.findOne(orderId);

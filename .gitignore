@@ -5,4 +5,4 @@
 
 *.class
 
-customer-ws/target/classes/
+*/target/

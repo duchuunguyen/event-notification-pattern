@@ -7,13 +7,14 @@ import java.util.UUID;
 
 public class UUIDGenerator {
     private static final char[] hexArray = "0123456789ABCDEF".toCharArray();
+
     public static String generateUUID() {
         MessageDigest salt = null;
         try {
             salt = MessageDigest.getInstance("SHA-256");
             salt.update(UUID.randomUUID().toString().getBytes("UTF-8"));
             return bytesToHex(salt.digest());
-        } catch (NoSuchAlgorithmException|UnsupportedEncodingException e) {
+        } catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
             // don't care about the exception b/c this is a demo
             e.printStackTrace();
         }

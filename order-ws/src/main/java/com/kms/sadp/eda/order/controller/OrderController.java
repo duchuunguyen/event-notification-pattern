@@ -31,7 +31,7 @@ public class OrderController {
         return new ResponseEntity<>(order, HttpStatus.OK);
     }
 
-    @RequestMapping(value="/orders/{orderId}", method= RequestMethod.GET)
+    @RequestMapping(value = "/orders/{orderId}", method = RequestMethod.GET)
     public ResponseEntity<Order> getOrder(@PathVariable String orderId) {
 
         Order order = orderRepository.find(orderId);

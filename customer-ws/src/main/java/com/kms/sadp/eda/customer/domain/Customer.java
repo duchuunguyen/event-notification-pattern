@@ -6,22 +6,22 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Customer {
-  private Long id;
-  private String name;
-  private Long money;
+    private Long id;
+    private String name;
+    private Long money;
 
 //  Money availableCredit() {
 //    return money.subtract(creditReservations.values().stream().reduce(Money.ZERO, Money::add));
 //  }
 
-  public Customer() {
-  }
+    public Customer() {
+    }
 
-  public Customer(Long id, String name, Long money) {
-      this.id = id;
-      this.name = name;
-      this.money = money;
-  }
+    public Customer(Long id, String name, Long money) {
+        this.id = id;
+        this.name = name;
+        this.money = money;
+    }
 
 //  public static ResultWithEvents<Customer> create(String name, Money creditLimit) {
 //    Customer customer = new Customer(name, creditLimit);

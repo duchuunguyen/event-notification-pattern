@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class CustomerService {
 
-  @Autowired
-  private CustomerRepository customerRepository;
+    @Autowired
+    private CustomerRepository customerRepository;
 
 //  @Autowired
 //  private DomainEventPublisher domainEventPublisher;
