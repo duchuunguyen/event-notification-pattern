@@ -1,5 +1,6 @@
-package com.kms.sadp.eda.order.domain;
+package com.kms.sadp.eda.common.domain;
 
+import com.google.gson.Gson;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,5 +18,10 @@ public class OrderDetails implements Serializable {
     public OrderDetails(Long customerId, Long orderTotal) {
         this.customerId = customerId;
         this.orderTotal = orderTotal;
+    }
+
+    @Override
+    public String toString() {
+        return new Gson().toJson(this);
     }
 }

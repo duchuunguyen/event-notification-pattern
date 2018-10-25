@@ -13,7 +13,7 @@ import javax.jms.Queue;
 public class OrderServiceApp {
     @Bean
     public Queue queue() {
-        return new ActiveMQQueue("sample.queue");
+        return new ActiveMQQueue("orderCreated.queue");
     }
 
     public static void main(String[] args) {

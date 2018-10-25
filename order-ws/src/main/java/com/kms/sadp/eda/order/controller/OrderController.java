@@ -1,7 +1,7 @@
 package com.kms.sadp.eda.order.controller;
 
-import com.kms.sadp.eda.order.domain.Order;
-import com.kms.sadp.eda.order.domain.OrderDetails;
+import com.kms.sadp.eda.common.domain.Order;
+import com.kms.sadp.eda.common.domain.OrderDetails;
 import com.kms.sadp.eda.order.domain.OrderRepository;
 import com.kms.sadp.eda.order.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;

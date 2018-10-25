@@ -1,7 +1,7 @@
 package com.kms.sadp.eda.customer.domain;
 
 public interface CustomerRepository {
-    Customer find(String orderId);
+    Customer find(Long customerId);
 
-    Customer save(Customer order);
+    Customer save(Customer customer);
 }

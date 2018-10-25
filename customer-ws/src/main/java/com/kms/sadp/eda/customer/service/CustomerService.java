@@ -11,10 +11,11 @@ public class CustomerService {
     @Autowired
     private CustomerRepository customerRepository;
 
-//  @Autowired
-//  private DomainEventPublisher domainEventPublisher;
-
     public Customer createCustomer(Customer customer) {
         return customerRepository.save(customer);
+    }
+
+    public Customer find(Long customerId) {
+        return customerRepository.find(customerId);
     }
 }

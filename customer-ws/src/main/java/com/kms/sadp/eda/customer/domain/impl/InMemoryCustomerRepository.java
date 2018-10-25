@@ -20,7 +20,7 @@ public class InMemoryCustomerRepository implements CustomerRepository {
     }
 
     @Override
-    public Customer find(String customerId) {
+    public Customer find(Long customerId) {
         if (customers.containsKey(customerId)) {
             return customers.get(customerId);
         }

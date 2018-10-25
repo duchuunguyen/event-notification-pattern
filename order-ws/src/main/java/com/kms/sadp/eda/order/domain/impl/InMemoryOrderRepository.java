@@ -1,6 +1,6 @@
 package com.kms.sadp.eda.order.domain.impl;
 
-import com.kms.sadp.eda.order.domain.Order;
+import com.kms.sadp.eda.common.domain.Order;
 import com.kms.sadp.eda.order.domain.OrderRepository;
 import org.springframework.stereotype.Component;
 

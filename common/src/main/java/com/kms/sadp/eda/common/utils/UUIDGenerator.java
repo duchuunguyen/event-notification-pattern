@@ -1,4 +1,4 @@
-package com.kms.sadp.eda.order.utils;
+package com.kms.sadp.eda.common.utils;
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
